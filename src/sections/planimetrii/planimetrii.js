@@ -1,32 +1,36 @@
 import "./planimetrii.css";
 import html from "./planimetrii.html?raw";
 
-// конфиг квартир для этой секции
+// configurare planuri apartamente
+// (poți adăuga câte vrei; imaginile pot fi reale PNG-uri)
 const apartmentPlans = {
-  "A-01": {
-    title: "Apartament 2 camere A-01",
-    meta: "Bloc A • ~68.4 m² • 2 camere",
-    image: "/plans/apartments/a-01.png",
-  },
-  "A-02": {
-    title: "Apartament 3 camere A-02",
-    meta: "Bloc A • ~82.0 m² • 3 camere",
-    image: "/plans/apartments/a-02.png",
-  },
-  "A-03": {
-    title: "Studio A-03",
-    meta: "Bloc A • ~38.0 m² • 1 cameră",
-    image: "/plans/apartments/a-03.png",
-  },
+  // Bloc B – apare primul în UI
   "B-01": {
     title: "Apartament 2 camere B-01",
-    meta: "Bloc B • ~65.2 m² • 2 camere",
+    meta: "Bloc B • ~65 m² • 2 camere",
     image: "/plans/apartments/b-01.png",
   },
   "B-02": {
     title: "Apartament 1 cameră B-02",
-    meta: "Bloc B • ~40.0 m² • 1 cameră",
+    meta: "Bloc B • ~40 m² • 1 cameră",
     image: "/plans/apartments/b-02.png",
+  },
+
+  // Bloc A – al doilea
+  "A-01": {
+    title: "Apartament 2 camere A-01",
+    meta: "Bloc A • ~68 m² • 2 camere",
+    image: "/plans/apartments/a-01.png",
+  },
+  "A-02": {
+    title: "Apartament 3 camere A-02",
+    meta: "Bloc A • ~82 m² • 3 camere",
+    image: "/plans/apartments/a-02.png",
+  },
+  "A-03": {
+    title: "Studio A-03",
+    meta: "Bloc A • ~38 m² • 1 cameră",
+    image: "/plans/apartments/a-03.png",
   },
 };
 
@@ -41,11 +45,16 @@ export function mountPlanimetrii(root) {
   const metaEl = root.querySelector("#aptModalMeta");
   const placeholder = root.querySelector("#aptModalPlaceholder");
 
-  // клики по квартирам
-  root.querySelectorAll(".apt-hotspot").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const id = btn.dataset.aptId;
+  // click pe orice <g class="apt-shape">
+  root.querySelectorAll(".apt-shape").forEach((shape) => {
+    shape.addEventListener("click", () => {
+      const id = shape.dataset.aptId;
       const data = apartmentPlans[id];
+
+      // highlight activ
+      root.querySelectorAll(".apt-shape").forEach((s) =>
+        s.classList.toggle("apt-shape--active", s === shape)
+      );
 
       if (data) {
         if (titleEl) titleEl.textContent = data.title;
@@ -71,7 +80,7 @@ export function mountPlanimetrii(root) {
     });
   });
 
-  // закрытие модалки
+  // închidere modal
   modal.addEventListener("click", (e) => {
     if (
       e.target === modal ||
@@ -82,7 +91,7 @@ export function mountPlanimetrii(root) {
     }
   });
 
-  // esc
+  // ESC pentru închidere
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && modal.classList.contains("apt-modal--open")) {
       modal.classList.remove("apt-modal--open");

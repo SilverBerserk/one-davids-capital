@@ -1,111 +1,116 @@
 <section id="planimetrii" class="section elementor-section">
-    <div class="container">
-      <p class="section__eyebrow">Planimetrii</p>
-      <h2 class="section__title">Alege apartamentul direct de pe hartă.</h2>
-      <p class="section__text">
-        Fiecare apartament poate fi selectat direct pe planul nivelului.
-        La click vezi schița detaliată a apartamentului și informațiile principale.
-      </p>
-  
-      <div class="floor-maps">
-        <!-- BLOC A -->
-        <div class="floor-map" data-bloc="A">
-          <div class="floor-map__label">Bloc A</div>
-          <img
-            src="/plans/bloc-a.png"
-            alt="Planimetrie Bloc A"
-            class="floor-map__image"
-          />
-  
-          <!-- Примеры квартир Bloc A (ты добавишь остальные по шаблону) -->
-          <button
-            class="apt-hotspot"
-            data-apt-id="A-01"
-            style="top: 16%; left: 62%; width: 7%; height: 6%;"
-            title="Apartament A-01"
-          ></button>
-  
-          <button
-            class="apt-hotspot"
-            data-apt-id="A-02"
-            style="top: 27%; left: 63%; width: 7%; height: 6%;"
-            title="Apartament A-02"
-          ></button>
-  
-          <button
-            class="apt-hotspot"
-            data-apt-id="A-03"
-            style="top: 52%; left: 35%; width: 7%; height: 6%;"
-            title="Apartament A-03"
-          ></button>
-        </div>
-  
-        <!-- BLOC B -->
-        <div class="floor-map" data-bloc="B">
-          <div class="floor-map__label">Bloc B</div>
-          <img
-            src="/plans/bloc-b.png"
-            alt="Planimetrie Bloc B"
-            class="floor-map__image"
-          />
-  
-          <!-- Примеры квартир Bloc B -->
-          <button
-            class="apt-hotspot"
-            data-apt-id="B-01"
-            style="top: 18%; left: 10%; width: 7%; height: 6%;"
-            title="Apartament B-01"
-          ></button>
-  
-          <button
-            class="apt-hotspot"
-            data-apt-id="B-02"
-            style="top: 40%; left: 13%; width: 7%; height: 6%;"
-            title="Apartament B-02"
-          ></button>
-        </div>
-      </div>
-    </div>
-  
-    <!-- МОДАЛКА ДЛЯ ПЛАНА КВАРТИРЫ -->
-    <div class="apt-modal" id="aptModal" aria-hidden="true">
-      <div class="apt-modal__dialog" role="dialog" aria-modal="true">
-        <button
-          type="button"
-          class="apt-modal__close"
-          data-apt-modal-close
-          aria-label="Închide"
+  <div class="container">
+    <p class="section__eyebrow">Planimetrii</p>
+    <h2 class="section__title">Alege apartamentul direct de pe plan.</h2>
+    <p class="section__text">
+      Fiecare apartament poate fi selectat direct pe planul nivelului. La click
+      vezi schița detaliată a apartamentului și informațiile principale.
+    </p>
+
+    <div class="floor-maps">
+      <!-- BLOC B PRIMUL -->
+      <div class="floor-map" data-bloc="B">
+        <!-- imaginea blocului B -->
+        <img
+          src="/plans/bloc-b.png"
+          alt="Planimetrie Bloc B"
+          class="floor-map__img"
+        />
+
+        <!-- overlay cu apartamentele Bloc B -->
+        <svg
+          class="floor-map__overlay"
+          viewBox="0 0 1780 2560"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          ✕
-        </button>
-  
-        <div class="apt-modal__header">
-          <p class="apt-modal__eyebrow">Planimetrie apartament</p>
-          <h3 class="apt-modal__title" id="aptModalTitle">Apartament</h3>
-          <p class="apt-modal__meta" id="aptModalMeta"></p>
-        </div>
-  
-        <div class="apt-modal__body">
-          <img
-            id="aptModalImage"
-            class="apt-modal__image"
-            src=""
-            alt="Planimetrie apartament"
-          />
-  
-          <div class="apt-modal__placeholder" id="aptModalPlaceholder">
-            Încarcă aici planurile detaliate ale apartamentelor
-            (PNG / JPG / SVG) și configurează-le în JavaScript.
-          </div>
-        </div>
-  
-        <div class="apt-modal__footer">
-          <p>
-            *Planimetriile au caracter informativ. Dimensiunile exacte și
-            compartimentarea pot varia în funcție de scară, nivel și poziționare.
-          </p>
-        </div>
+          <g role="list">
+            <!-- exemple, vei înlocui cu path-urile reale -->
+            <g role="listitem" class="apt-shape" data-apt-id="b-01" aria-label="Apartament 55.03 mp">
+              <path  d="M180 50 L550 50 L550 420 L670 420 L670 670 L580 670 L580 700 L480 700 L480 620 L180 620 Z" />
+            </g>
+
+            <g role="listitem" class="apt-shape" data-apt-id="b-02">
+              <path d="M550 50 L950 50 L950 660 L680 660 L680 420 L550 420 Z" />
+            </g>
+            <g role="listitem" class="apt-shape" data-apt-id="b-03">
+              <path d="M950 50 L1340 50 L1330 420 L1220 420 L1220 660 L950 660 Z" />
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <!-- BLOC A AL DOILEA -->
+      <div class="floor-map" data-bloc="A">
+        <!-- imaginea blocului A -->
+        <img
+          src="/plans/bloc-a.png"
+          alt="Planimetrie Bloc A"
+          class="floor-map__img"
+        />
+
+        <!-- overlay cu apartamentele Bloc A -->
+        <svg
+          class="floor-map__overlay"
+          viewBox="0 0 1780 2560"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g role="list">
+            <!-- exemple, vei înlocui cu path-urile reale -->
+            <g role="listitem" class="apt-shape" data-apt-id="A-01">
+              <path d="M100 250 L450 250 L450 550 L150 550 Z" />
+            </g>
+
+            <g role="listitem" class="apt-shape" data-apt-id="A-02">
+              <path d="M500 260 L900 260 L900 560 L500 560 Z" />
+            </g>
+
+            <g role="listitem" class="apt-shape" data-apt-id="A-03">
+              <path d="M950 280 L1350 280 L1350 620 L950 620 Z" />
+            </g>
+          </g>
+        </svg>
       </div>
     </div>
-  </section>
-  
+  </div>
+
+  <!-- MODAL PENTRU PLANUL APARTAMENTULUI -->
+  <div class="apt-modal" id="aptModal" aria-hidden="true">
+    <div class="apt-modal__dialog" role="dialog" aria-modal="true">
+      <button
+        type="button"
+        class="apt-modal__close"
+        data-apt-modal-close
+        aria-label="Închide"
+      >
+        ✕
+      </button>
+
+      <div class="apt-modal__header">
+        <p class="apt-modal__eyebrow">Planimetrie apartament</p>
+        <h3 class="apt-modal__title" id="aptModalTitle">Apartament</h3>
+        <p class="apt-modal__meta" id="aptModalMeta"></p>
+      </div>
+
+      <div class="apt-modal__body">
+        <img
+          id="aptModalImage"
+          class="apt-modal__image"
+          src=""
+          alt="Planimetrie apartament"
+        />
+
+        <div class="apt-modal__placeholder" id="aptModalPlaceholder">
+          Încarcă aici planurile detaliate ale apartamentelor
+          (PNG / JPG / SVG) și configurează-le în JavaScript.
+        </div>
+      </div>
+
+      <div class="apt-modal__footer">
+        <p>
+          *Planimetriile au caracter informativ. Dimensiunile exacte și
+          compartimentarea pot varia în funcție de scară, nivel și poziționare.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
