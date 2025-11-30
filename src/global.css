@@ -1,0 +1,154 @@
+:root {
+    --color-bg: #050816;
+    --color-bg-dark: #020613;
+    --color-card: #111827;
+  
+    --color-gold: #e9c46a;
+    --color-gold-soft: #f1d58c;
+  
+    --color-accent: #264653;
+  
+    --color-text: #e5e7eb;
+    --color-muted: #9ca3af;
+  
+    --border-subtle: rgba(255, 255, 255, 0.06);
+  
+    --max-width: 1120px;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, sans-serif;
+    background: radial-gradient(
+        circle at top,
+        rgba(233, 196, 106, 0.15),
+        transparent 55%
+      ),
+      radial-gradient(circle at bottom, rgba(38, 70, 83, 0.9), #050816);
+    color: var(--color-text);
+    line-height: 1.4;
+  }
+  
+  /* Layout */
+  
+  .container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.2rem;
+  }
+  
+  .section {
+    padding: 4rem 0;
+    border-top: 1px solid var(--border-subtle);
+  }
+  
+  .section--dark {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  .section__eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 0.7rem;
+    color: var(--color-gold);
+  }
+  
+  .section__title {
+    margin-top: 0.75rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
+  
+  .section__text {
+    margin-top: 0.75rem;
+    max-width: 720px;
+    font-size: 0.9rem;
+    color: var(--color-muted);
+  }
+  
+  /* Buttons */
+  
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+  .btn--gold {
+    background: var(--color-gold);
+    color: #020617;
+  }
+  
+  .btn--gold:hover {
+    background: var(--color-gold-soft);
+    transform: translateY(-1px);
+  }
+  
+  .btn--ghost {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--color-text);
+  }
+  
+  .btn--ghost:hover {
+    background: rgba(255, 255, 255, 0.06);
+  }
+  
+  .btn--outline-gold {
+    border: 1px solid var(--color-gold);
+    background: rgba(233, 196, 106, 0.1);
+    color: var(--color-gold);
+  }
+  
+  .btn--outline-gold:hover {
+    background: var(--color-gold);
+    color: #020617;
+  }
+  
+  .btn--sm {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.7rem;
+  }
+  
+  /* Elementor-like scroll animation */
+  
+  .elementor-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+      opacity 0.7s ease-out,
+      transform 0.7s ease-out;
+    will-change: opacity, transform;
+  }
+  
+  .elementor-section.elementor-section--visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  @media (max-width: 900px) {
+    .section {
+      padding: 3rem 0;
+    }
+  }
+  

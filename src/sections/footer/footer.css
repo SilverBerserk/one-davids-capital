@@ -1,0 +1,24 @@
+.footer {
+    padding: 1rem 0;
+    background: #020617;
+    border-top: 1px solid var(--border-subtle);
+    font-size: 0.75rem;
+    color: var(--color-muted);
+  }
+  
+  .footer__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    text-align: center;
+  }
+  
+  @media (min-width: 769px) {
+    .footer__inner {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+      align-items: center;
+    }
+  }
+  

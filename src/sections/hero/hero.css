@@ -1,0 +1,140 @@
+.section--hero {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at top,
+        rgba(233, 196, 106, 0.18),
+        transparent 60%
+      ),
+      radial-gradient(circle at bottom, rgba(38, 70, 83, 0.8), #050816);
+    opacity: 1;
+  }
+  
+  .hero__inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 2rem;
+    padding: 4rem 0;
+  }
+  
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+  }
+  
+  .eyebrow {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.26em;
+    color: #cbd5f5;
+  }
+  
+  .hero__title {
+    font-size: 2.3rem;
+    line-height: 1.1;
+    font-weight: 600;
+  }
+  
+  .hero__title--accent {
+    display: block;
+    color: var(--color-gold);
+  }
+  
+  .hero__subtitle {
+    max-width: 520px;
+    font-size: 0.9rem;
+    color: var(--color-muted);
+  }
+  
+  .hero__actions {
+    display: flex;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+  }
+  
+  .hero__visual {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  
+  .hero-card {
+    position: relative;
+    height: 260px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: radial-gradient(circle at top, #0f172a, transparent),
+      radial-gradient(circle at bottom, #264653, #020617);
+    border: 1px solid rgba(148, 163, 184, 0.4);
+  }
+  
+  .hero-card__bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.4;
+    background-image: linear-gradient(
+        135deg,
+        rgba(15, 23, 42, 0.2),
+        rgba(15, 23, 42, 0.9)
+      ),
+      repeating-linear-gradient(
+        135deg,
+        rgba(148, 163, 184, 0.12),
+        rgba(148, 163, 184, 0.12) 1px,
+        transparent 1px,
+        transparent 4px
+      );
+  }
+  
+  .hero-card__content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    padding: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.8rem;
+  }
+  
+  .hero-card__eyebrow {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: #9ca3af;
+  }
+  
+  .hero-card__title {
+    margin-top: 0.25rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  .hero-card__text {
+    margin-top: 0.25rem;
+    color: var(--color-muted);
+    font-size: 0.78rem;
+  }
+  
+  .hero-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .badge {
+    border-radius: 999px;
+    padding: 0.45rem 0.75rem;
+    background: rgba(15, 23, 42, 0.72);
+    border: 1px solid rgba(148, 163, 184, 0.5);
+  }
+  

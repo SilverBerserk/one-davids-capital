@@ -1,0 +1,40 @@
+.timeline {
+    margin-top: 1.5rem;
+    border-left: 1px solid rgba(148, 163, 184, 0.6);
+    padding-left: 1rem;
+  }
+  
+  .timeline__item {
+    position: relative;
+    margin-bottom: 1.3rem;
+  }
+  
+  .timeline__dot {
+    position: absolute;
+    left: -1.25rem;
+    top: 0.3rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: var(--color-gold);
+    box-shadow: 0 0 0 4px rgba(233, 196, 106, 0.2);
+  }
+  
+  .timeline__date {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-muted);
+  }
+  
+  .timeline__title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 0.2rem;
+  }
+  
+  .timeline__text {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+  }
+  
