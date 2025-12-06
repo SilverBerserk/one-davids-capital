@@ -1,0 +1,66 @@
+.apt-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  z-index: 200;
+}
+
+.apt-modal--open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apt-modal__dialog {
+  position: relative;      /* 🔥 required for close button placement */
+  width: 100%;
+  max-width: 880px;
+  max-height: 90vh;
+  background: rgba(15, 23, 42, 0.96);
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.65);
+  padding: 1.2rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+
+.apt-modal__body {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 0.5rem;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.85);
+  padding: 1rem;
+}
+
+.apt-modal__image {
+  display: none;
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 12px;
+}
+
+.apt-modal__placeholder {
+  color: #a9b1bc;
+  text-align: center;
+}
+
+.apt-modal__close {
+  position: absolute;
+  top: 12px;       /* adjust for aesthetics */
+  right: 16px;
+  background: transparent;
+  color: #d1d5db;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  z-index: 20;      /* ensure on top of dialog content */
+}
+
+.apt-modal__close:hover {
+  color: white;
+}
