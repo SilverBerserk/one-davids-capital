@@ -10,6 +10,7 @@
 .floor-map {
   position: relative;
   border-radius: 12px;
+  background-color: #FFF;
   overflow: hidden; /* rotunjim colțurile la img + svg */
 }
 

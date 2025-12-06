@@ -1,0 +1,33 @@
+<div class="chatbot" id="chatbot">
+    <button class="chatbot__toggle" id="chatbotToggle" aria-label="Deschide chatul">
+      💬
+    </button>
+  
+    <div class="chatbot__window" id="chatbotWindow" aria-hidden="true">
+      <div class="chatbot__header">
+        <div>
+          <p class="chatbot__title">Asistent ONE David's Capital</p>
+          <p class="chatbot__subtitle">Întreabă despre apartamente, planimetrii, prețuri.</p>
+        </div>
+        <button class="chatbot__close" id="chatbotClose" aria-label="Închide chatul">✕</button>
+      </div>
+  
+      <div class="chatbot__messages" id="chatbotMessages">
+        <div class="chatbot__message chatbot__message--bot">
+          <p>Bună! 👋 Cu ce te pot ajuta legat de ONE David's Capital?</p>
+        </div>
+      </div>
+  
+      <form class="chatbot__form" id="chatbotForm">
+        <input
+          type="text"
+          id="chatbotInput"
+          class="chatbot__input"
+          placeholder="Scrie întrebarea ta..."
+          autocomplete="off"
+        />
+        <button type="submit" class="chatbot__send">Trimite</button>
+      </form>
+    </div>
+  </div>
+  

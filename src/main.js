@@ -9,6 +9,7 @@ import { mountAmplasare } from "./sections/amplasare/amplasare.js";
 import { mountMers } from "./sections/mers/mers.js";
 import { mountContacte } from "./sections/contacte/contacte.js";
 import { mountFooter } from "./sections/footer/footer.js";
+import { mountChatbot } from "./components/chatbot/chatbot.js";
 
 function setupElementorScrollAnimations() {
   const sections = document.querySelectorAll(".elementor-section");
@@ -40,5 +41,6 @@ window.addEventListener("DOMContentLoaded", () => {
   mountContacte(document.getElementById("contacte"));
   mountFooter(document.getElementById("footer"));
 
+  mountChatbot();
   setupElementorScrollAnimations();
 });

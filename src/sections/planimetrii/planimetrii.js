@@ -9,29 +9,33 @@ const apartmentPlans = {
   "b-01": {
     title: "Apartament 2 camere B-01",
     meta: "Bloc B • ~65 m² • 2 camere",
-    image: "/plans/apartments/b-01.png",
+    image: "/plans/apartments/b-01.jpg",
   },
   "b-02": {
     title: "Apartament 1 cameră B-02",
     meta: "Bloc B • ~40 m² • 1 cameră",
-    image: "/plans/apartments/b-02.png",
+    image: "/plans/apartments/b-02.jpg",
   },
-
+  "b-03": {
+    title: "Apartament 1 cameră B-03",
+    meta: "Bloc B • ~40 m² • 1 cameră",
+    image: "/plans/apartments/b-03.jpg",
+  },
   // Bloc A – al doilea
   "a-01": {
     title: "Apartament 2 camere A-01",
     meta: "Bloc A • ~68 m² • 2 camere",
-    image: "/plans/apartments/a-01.png",
+    image: "/plans/apartments/a-01.jpg",
   },
   "a-02": {
     title: "Apartament 3 camere A-02",
     meta: "Bloc A • ~82 m² • 3 camere",
-    image: "/plans/apartments/a-02.png",
+    image: "/plans/apartments/a-02.jpg",
   },
-  "A-03": {
+  "a-03": {
     title: "Studio A-03",
     meta: "Bloc A • ~38 m² • 1 cameră",
-    image: "/plans/apartments/a-03.png",
+    image: "/plans/apartments/a-03.jpg",
   },
 };
 
