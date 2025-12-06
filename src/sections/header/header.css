@@ -92,6 +92,29 @@
     font-size: 0.85rem;
   }
   
+  .logo__circle {
+    width: 48px;              /* adjust size */
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    background: rgba(255, 255, 255, 0.12);   /* optional */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .logo__circle .logo__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* keep logo centered & filled */
+    display: block;
+  }
+  
+
+  
+  
   @media (max-width: 768px) {
     .nav--desktop {
       display: none;

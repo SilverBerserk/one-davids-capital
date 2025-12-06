@@ -52,7 +52,7 @@
   .hero__subtitle {
     max-width: 520px;
     font-size: 0.9rem;
-    color: var(--color-muted);
+    color: var(--color-white);
   }
   
   .hero__actions {
@@ -69,7 +69,7 @@
   
   .hero-card {
     position: relative;
-    height: 260px;
+    height: 300px;
     border-radius: 24px;
     overflow: hidden;
     background: radial-gradient(circle at top, #0f172a, transparent),
@@ -124,17 +124,137 @@
     color: var(--color-muted);
     font-size: 0.78rem;
   }
+  /* ============================== */
+/* BEAUTIFUL HERO BADGES (NEW)    */
+/* ============================== */
+
+.hero-card__badges {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.1rem;
+}
+
+/* each badge */
+.badge {
+  flex: 1;
+  min-width: 110px;
+  padding: 0.65rem 0.85rem;
+
+  background: rgba(255, 255, 255, 0.06);               /* subtle glass */
+  border: 1px solid rgba(255, 255, 255, 0.15);         /* soft border */
+  backdrop-filter: blur(6px);                          /* glass effect */
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  transition: background 0.25s ease, border-color 0.25s ease,
+              transform 0.2s ease;
+}
+
+.badge:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.32);
+  transform: translateY(-2px);
+}
+
+/* label (top) */
+.badge__label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #cbd5e1;                                      /* light slate */
+  opacity: 0.85;
+}
+
+/* value (bottom) */
+.badge__value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+}
   
-  .hero-card__badges {
+  /* HERO BACKGROUND CAROUSEL */
+.hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none; /* prevent blocking buttons */
+}
+
+.hero-carousel--bg {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.hero-slide--active {
+  opacity: 1;
+}
+
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.45); /* 🌙 darken background */
+}
+
+/* ensure hero content stays above the carousel */
+.section--hero .hero__inner,
+.section--hero .hero__overlay {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* MOBILE & SMALL SCREENS */
+@media (max-width: 1200px) {
+   .hero__inner {
+    padding: 2rem;
+   }
+
+}
+
+
+
+/* MOBILE & SMALL SCREENS */
+@media (max-width: 768px) {
+
+  .hero__inner {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    flex-direction: column;   /* stack but keep order */
+    gap: 1.8rem;              /* spacing between blocks */
   }
-  
-  .badge {
-    border-radius: 999px;
-    padding: 0.45rem 0.75rem;
-    background: rgba(15, 23, 42, 0.72);
-    border: 1px solid rgba(148, 163, 184, 0.5);
+
+  /* Make text more readable on smaller screens */
+  .hero__title {
+    font-size: 2rem;
+    line-height: 1.2;
   }
-  
+
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+
+  /* Hero card scales down slightly */
+  .hero-card {
+    transform: scale(0.96);
+  }
+
+  /* Background carousel height */
+  .hero__media {
+    height: 100vh;  /* adjust to taste */
+  }
+}
+
+
+
