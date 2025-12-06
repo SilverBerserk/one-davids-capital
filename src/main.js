@@ -10,6 +10,7 @@ import { mountMers } from "./sections/mers/mers.js";
 import { mountContacte } from "./sections/contacte/contacte.js";
 import { mountFooter } from "./sections/footer/footer.js";
 import { mountChatbot } from "./components/chatbot/chatbot.js";
+import { mountTiktok } from "./sections/tiktok/tiktok.js";
 
 function setupElementorScrollAnimations() {
   const sections = document.querySelectorAll(".elementor-section");
@@ -38,6 +39,7 @@ window.addEventListener("DOMContentLoaded", () => {
   mountPlanimetrii(document.getElementById("planimetrii"));
   mountAmplasare(document.getElementById("amplasare"));
   mountMers(document.getElementById("mers"));
+  mountTiktok(document.querySelector("#tiktok-root"));
   mountContacte(document.getElementById("contacte"));
   mountFooter(document.getElementById("footer"));
 

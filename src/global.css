@@ -61,7 +61,7 @@
   .section__eyebrow {
     text-transform: uppercase;
     letter-spacing: 0.22em;
-    font-size: 0.7rem;
+    font-size: 1rem;
     color: var(--color-gold);
   }
   
